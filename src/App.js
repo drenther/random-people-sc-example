@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Home from './components/Home';
-import { Button } from './components/Button';
+import Button from './components/Button';
 import Loader from './components/Loader';
 import UserProfile from './components/UserProfile';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Redirect, Link } from 'react-router-dom';
 
-import { FloatingButton } from './Button';
+import Button from './Button';
 
 import { concatName } from '../utils/helpers';
 import { getColor, getFontSize } from '../utils/theme';
@@ -34,7 +34,7 @@ const UserProfile = ({ user, className }) =>
         </Group>
       </Details>
       <Link to="/">
-        <FloatingButton>Go Back</FloatingButton>
+        <Button floating>Go Back</Button>
       </Link>
     </div>
   ) : (
