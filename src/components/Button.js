@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { getFontSize, getColor } from '../utils/theme';
 
-export const Button = styled.button`
+const Button = styled.button`
   font-size: ${getFontSize('smFont')};
   color: ${getColor('primary')};
   background: ${getColor('light')};
@@ -15,11 +15,15 @@ export const Button = styled.button`
   align-self: center;
   height: 30px;
   border: solid 1px ${getColor('primary')};
+
+  ${props =>
+    props.floating &&
+    css`
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    `};
 `;
 
-export const FloatingButton = Button.extend`
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-`;
+export default Button;
